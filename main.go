@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -19,11 +20,11 @@ func main() {
 	fmt.Println(qntt)
 }
 
-func count(src string) int {
+func count(src string) string {
 
 	text := strings.Split(src, " ")
 
-	return len(text)
+	return strconv.Itoa(len(text))
 }
 
 func readInput() (src string, err error) {
